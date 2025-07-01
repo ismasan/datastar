@@ -44,6 +44,9 @@ module Datastar
       # Inserts the fragment after the existing element.
       AFTER = 'after'
 
+      # Removes the element
+      REMOVE = 'remove'
+
       # Upserts the attributes of the existing element.
       UPSERT_ATTRIBUTES = 'upsertAttributes'
     end
