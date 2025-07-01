@@ -10,7 +10,7 @@ module Datastar
     DEFAULT_SSE_RETRY_DURATION = 1000
 
     # Should fragments be merged using the ViewTransition API?
-    DEFAULT_FRAGMENTS_USE_VIEW_TRANSITIONS = false
+    DEFAULT_ELEMENTS_USE_VIEW_TRANSITIONS = false
 
     # Should a given set of signals merge if they are missing?
     DEFAULT_MERGE_SIGNALS_ONLY_IF_MISSING = false
@@ -21,7 +21,7 @@ module Datastar
     # The default attributes for <script/> element use when executing scripts. It is a set of key-value pairs delimited by a newline \\n character.}
     DEFAULT_EXECUTE_SCRIPT_ATTRIBUTES = 'type module'
 
-    module FragmentMergeMode
+    module ElementPatchMode
 
       # Morphs the fragment into the existing element using idiomorph.
       MORPH = 'morph'
@@ -48,13 +48,13 @@ module Datastar
       UPSERT_ATTRIBUTES = 'upsertAttributes'
     end
 
-    # The mode in which a fragment is merged into the DOM.
-    DEFAULT_FRAGMENT_MERGE_MODE = FragmentMergeMode::MORPH
+    # The mode in which an element is patched into the DOM.
+    DEFAULT_ELEMENT_PATCH_MODE = ElementPatchMode::MORPH
 
     # Dataline literals.
     SELECTOR_DATALINE_LITERAL = 'selector'
-    MERGE_MODE_DATALINE_LITERAL = 'mergeMode'
-    FRAGMENTS_DATALINE_LITERAL = 'fragments'
+    PATCH_MODE_DATALINE_LITERAL = 'mode'
+    ELEMENTS_DATALINE_LITERAL = 'elements'
     USE_VIEW_TRANSITION_DATALINE_LITERAL = 'useViewTransition'
     SIGNALS_DATALINE_LITERAL = 'signals'
     ONLY_IF_MISSING_DATALINE_LITERAL = 'onlyIfMissing'
